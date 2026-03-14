@@ -35,17 +35,24 @@ body::before {
 
 /* 2. Header & Branding */
 header {
-    background-color: #225ce2;
+    background-color: #010101;
     color: white;
     padding: 3rem 1rem;
     text-align: center;
 }
 
 header h1 {
-    font-size: clamp(2.5rem, 10vw, 5.5rem); /* Responsive sizing */
+    font-size: clamp(1rem, 6vw, 2rem); /* Responsive sizing */
     margin: 0;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
+}
+header h2 {
+    font-size: clamp(.9rem, 4vw, 1.7rem);
+    margin: 0.5rem 0 0;
+    font-weight: normal;
+    color: #225ce2;
+    font-style: italic;
 }
 
 /* 3. Main Content Area */
@@ -54,6 +61,48 @@ main {
     margin: 0 auto;
     padding: 4rem 2rem;
     text-align: center;
+}
+
+.topnav{
+    background-color: #333;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.topnav a {
+color: white;
+text-align: center;
+padding: 20px 16px;
+text-decoration: none;
+font-size: 1.2rem;
+border-bottom: 1px solid #444;
+width: 100%;
+display: block;
+}
+
+.topnav a:last-child {
+    border-bottom:none;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+@media (min-width: 768px) {
+    .topnav {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .topnav a {
+        border-bottom: none;
+        border-right: 1px solid #444;
+        width: auto;
+    }
+    .topnav a:last-child {
+        border-right: none;
+    }
 }
 
 /* Typography Fixes */
@@ -80,9 +129,6 @@ img {
     margin: 2rem auto;
 }
 
-.toppar {
-    font-size: 75px;
-}
 .top {
     width: 100%;
     height: auto;
@@ -165,6 +211,7 @@ ul {
     display: inline-block;
     text-align: left;
     font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    list-style: none;
 }
 
 ul li {
@@ -174,6 +221,7 @@ ul li {
 }
 
 ul li::before {
+    content: "✓"; /* Unicode checkmark */
     color: #225ce2;
     font-weight: bold;
     margin-right: 10px;
