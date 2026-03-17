@@ -110,6 +110,10 @@ p {
     font-size: clamp(1.1rem, 2.5vw, 1.5rem);
     margin-bottom: 1.5rem;
 }
+a {
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    margin-bottom: 1.5rem;
+}
 
 h2 {
     color: #225ce2;
